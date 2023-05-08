@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Link;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_mail_alter().
+ */
+function dependency_injection_exercise_mail_alter(&$message) {
+  // To ensure all mails are redirected to "nope@doesntexist.com"
+  $message['to'] = 'nope@doesntexist.com';
+}

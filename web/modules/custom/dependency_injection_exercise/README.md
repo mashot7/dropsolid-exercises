@@ -23,3 +23,5 @@ Branch: `dependency-injection-exercise`
 
 1. Created: `src/Services/FetchPhotoService.php`, and `dependency_injection_exercise.services.yml`
    Modified: `src/Controller/RestOutputController.php`, and `src/Plugin/Block/RestOutputBlock.php`
+
+2. Created: `src/Services/MailManager.php`, `src/DependencyInjectionExerciseServiceProvider.php`, and `dependency_injection_exercise.module`
