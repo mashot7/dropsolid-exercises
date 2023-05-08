@@ -303,6 +303,14 @@ function rocketship_theme_starter_preprocess_block(&$variables) {
   if (isset($variables['base_plugin_id']) && $variables['base_plugin_id'] === 'language_block' && theme_get_setting('language_dropdown')) {
     $variables['menu_block_bem_extra'][] = 'nav--language--dropdown';
   }
+
+  // adding custom attribute class for block
+  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $blockType = $variables['content']['#block_content']->bundle();
+    if ($blockType == 'info') {
+      $variables['attributes']['class'][] = 'block--type-' . $blockType;
+    }
+  }
 }
 
 /**
