@@ -1,0 +1,8 @@
+services:
+  dependency_injection_exercise.fetch_photos:
+    class: Drupal\dependency_injection_exercise\Services\FetchPhotoService
+    arguments: [
+      '@http_client',
+      '@serialization.json',
+      '@logger.factory'
+    ]

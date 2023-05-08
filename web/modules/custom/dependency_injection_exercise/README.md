@@ -14,3 +14,12 @@
 
 - [Services and dependency injection in Drupal 8+](https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8)
 - [Altering existing services, providing dynamic services](https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/altering-existing-services-providing-dynamic-services)
+
+# Solution
+
+Every exercise solution is committed separately. E.g. exercise 1: "DIE: Exercise 1" and etc.
+
+Branch: `dependency-injection-exercise`
+
+1. Created: `src/Services/FetchPhotoService.php`, and `dependency_injection_exercise.services.yml`
+   Modified: `src/Controller/RestOutputController.php`, and `src/Plugin/Block/RestOutputBlock.php`
