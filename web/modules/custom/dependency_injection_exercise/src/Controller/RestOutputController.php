@@ -46,4 +46,13 @@ class RestOutputController extends ControllerBase {
     return $this->photoService->showPhotos(5);
   }
 
+  /**
+   * Display empty page
+   *
+   * @return array
+   */
+  public function emptyPage(): array {
+    return [];
+  }
+
 }

@@ -11,3 +11,22 @@ function dependency_injection_exercise_mail_alter(&$message) {
   // To ensure all mails are redirected to "nope@doesntexist.com"
   $message['to'] = 'nope@doesntexist.com';
 }
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ */
+function dependency_injection_exercise_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
+  // Append the current page title to the breadcrumb for non-admin routes.
+  if (!Drupal::service('router.admin_context')
+    ->isAdminRoute()) {
+    // TODO:  Dropsolid and Example links can be added as well with this hook,
+    // but generating correct routes are better solution
+
+    $title = Drupal::service('title_resolver')
+      ->getTitle(Drupal::request(), $route_match->getRouteObject());
+    if (!empty($title)) {
+      $breadcrumb->addLink(Link::createFromRoute($title, '<none>'));
+    }
+  }
+
+}
