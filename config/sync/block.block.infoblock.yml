@@ -1,0 +1,30 @@
+uuid: 582004b6-ce48-467f-a833-434d0ca609d6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:info:5d5d074e-2aa8-476b-8442-064739e9cc34'
+  module:
+    - block_content
+    - system
+  theme:
+    - rocketship_theme_starter
+id: infoblock
+theme: rocketship_theme_starter
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:5d5d074e-2aa8-476b-8442-064739e9cc34'
+settings:
+  id: 'block_content:5d5d074e-2aa8-476b-8442-064739e9cc34'
+  label: 'Info block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

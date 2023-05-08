@@ -1,0 +1,35 @@
+uuid: 833644ef-c5b9-4f30-ae64-7b6fedb5efeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.info
+    - field.field.block_content.info.field_link
+    - field.field.block_content.info.field_long_text
+  module:
+    - link
+id: block_content.info.default
+targetEntityType: block_content
+bundle: info
+mode: default
+content:
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_long_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

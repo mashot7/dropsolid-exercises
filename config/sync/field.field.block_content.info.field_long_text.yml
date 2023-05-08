@@ -1,0 +1,19 @@
+uuid: 8840c47c-c9b7-458a-b953-abe135ca10fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.info
+    - field.storage.block_content.field_long_text
+id: block_content.info.field_long_text
+field_name: field_long_text
+entity_type: block_content
+bundle: info
+label: 'Long text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
