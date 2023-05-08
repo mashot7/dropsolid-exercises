@@ -7,6 +7,20 @@ services:
       '@logger.factory'
     ]
 
+    ## Alternative option for exercise 2
+  #  dependency_injection_exercise.mail_manager:
+  #    class: Drupal\dependency_injection_exercise\Services\MailManager
+  #    arguments: [
+  #      '@container.namespaces',
+  #      '@cache.discovery',
+  #      '@module_handler',
+  #      '@config.factory',
+  #      '@logger.factory',
+  #      '@string_translation',
+  #      '@renderer'
+  #    ]
+  ##  plugin.manager.mail:
+  ##    alias: dependency_injection_exercise.mail_manager
   dependency_injection_exercise.language_manager:
     class: Drupal\dependency_injection_exercise\LanguageManager
     arguments: [ '@language.default' ]
