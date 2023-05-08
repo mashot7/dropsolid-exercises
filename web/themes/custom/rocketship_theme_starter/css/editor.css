@@ -383,10 +383,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@-ms-viewport {
-  width: device-width;
-}
 body {
   font-family: "Arial", sans-serif;
   font-size: 1rem;
@@ -465,7 +461,6 @@ label,
 select,
 summary,
 textarea {
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -621,7 +616,8 @@ html [type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  appearance: button;
+     -moz-appearance: button;
+          appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -643,7 +639,8 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=week] {
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 input[type=date]::-webkit-calendar-picker-indicator:hover,
 input[type=datetime]::-webkit-calendar-picker-indicator:hover,
@@ -688,19 +685,20 @@ progress {
 [type=search] {
   outline-offset: -2px;
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 [type=search]::-webkit-search-cancel-button,
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
-  appearance: button;
+          appearance: button;
 }
 
 input[type=button], input[type=reset], input[type=submit] {
@@ -716,9 +714,7 @@ input[type=button]:focus, input[type=button]:focus:hover, input[type=reset]:focu
 }
 @media (min-width: 480px) and (max-width: 767px) {
   #styleguide-header {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   #styleguide-header .item-list {
@@ -728,9 +724,7 @@ input[type=button]:focus, input[type=button]:focus:hover, input[type=reset]:focu
 }
 @media (min-width: 768px) {
   #styleguide-header {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   #styleguide-header .item-list {
@@ -956,7 +950,8 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   /**
   * Remove the outline on focused links when they are also active or hovered
@@ -1072,6 +1067,10 @@ a:not([href]):not([tabindex]):focus {
 [onclick^="location.href="],
 [onclick^="window.open"] {
   cursor: pointer;
+}
+
+.block-block_content .field--name-field-link a {
+  color: #0a7bc1;
 }
 
 .file {
@@ -1679,7 +1678,6 @@ img {
   max-width: none;
   border-radius: 50%;
   background-color: hsl(var(--clr-spot-1));
-  -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   animation: blast 1s infinite ease-out;
   content: "";
@@ -1725,7 +1723,6 @@ img {
   max-width: none;
   border-radius: 50%;
   background-color: hsl(var(--clr-spot-1));
-  -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   animation: blast 1s infinite ease-out;
   content: "";
@@ -1771,7 +1768,6 @@ img {
   max-width: none;
   border-radius: 50%;
   background-color: hsl(var(--clr-spot-1));
-  -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   animation: blast 1s infinite ease-out;
   content: "";
@@ -1898,9 +1894,7 @@ picture img {
 }
 
 .icons-demo {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .icons-demo pre {
@@ -1916,18 +1910,13 @@ picture img {
 }
 
 .icons-demo__item-group {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .icons-demo__item {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0.625rem;
   border: 1px solid clr(off-white);
@@ -2035,14 +2024,7 @@ form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):n
   font-size: 0.875rem;
   line-height: 1.1875rem;
 }
-form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type]):-ms-input-placeholder, form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden]):-ms-input-placeholder,
-form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea:-ms-input-placeholder,
-form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type]):-ms-input-placeholder,
-form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden]):-ms-input-placeholder,
-form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea:-ms-input-placeholder,
-form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type]):-ms-input-placeholder,
-form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden]):-ms-input-placeholder,
-form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea:-ms-input-placeholder {
+form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type])::-moz-placeholder, form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden])::-moz-placeholder, form[class*=webform-submission] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea::-moz-placeholder, form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type])::-moz-placeholder, form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden])::-moz-placeholder, form[class*=contact] .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea::-moz-placeholder, form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type])::-moz-placeholder, form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden])::-moz-placeholder, form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):not(.form-type--checkbox):not(.form-type--item):not(.form-type--password-confirm):not(.form-type-managed-file):not(.form-type-file):not([class*=form__element--comment-body]) textarea::-moz-placeholder {
   color: transparent;
   font-size: 0.875rem;
   line-height: 1.1875rem;
@@ -2082,7 +2064,8 @@ form.is--floating .form__element:not(.form-type--range):not(.form-type--radio):n
 input[type=radio],
 input[type=checkbox] {
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   position: relative;
   top: 0.3125rem;
   display: inline-block;
@@ -2324,11 +2307,8 @@ fieldset > .form__element__tooltip, .ui-widget fieldset > .form__element__toolti
 
 .form__element--prefix,
 .form__element--suffix {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-align: center;
   align-items: center;
 }
 .form__element--prefix .form__element__description,
@@ -2345,9 +2325,7 @@ fieldset > .form__element__tooltip, .ui-widget fieldset > .form__element__toolti
 }
 
 .form__element .container-inline {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -2357,7 +2335,6 @@ fieldset > .form__element__tooltip, .ui-widget fieldset > .form__element__toolti
   line-height: 1.5rem;
 }
 .form__element .container-inline div {
-  -ms-flex: 1;
   flex: 1;
   padding-left: 0.625rem;
 }
@@ -2365,12 +2342,10 @@ fieldset > .form__element__tooltip, .ui-widget fieldset > .form__element__toolti
   padding-left: 0;
 }
 .form__element .container-inline .description {
-  -ms-flex: 1 0 100%;
   flex: 1 0 100%;
   padding-left: 0;
 }
 .form__element .container-inline [data-drupal-field-elements=date-time] + .description {
-  -ms-flex: 0 1 0px;
   flex: 0 1 0;
   padding-left: 0.625rem;
 }
@@ -2588,7 +2563,8 @@ form .description ul > li::before,
 input:not([type]), input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden]),
 textarea {
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0.5625rem 0.625rem;
   width: 100%;
   border: 1px solid hsl(var(--clr-form-border));
@@ -2598,8 +2574,7 @@ textarea {
   outline: none;
   transition: all 0.3s ease-in-out;
 }
-input:not([type]):-ms-input-placeholder, input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden]):-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:not([type])::-moz-placeholder, input:not([type=range]):not([type=radio]):not([type=checkbox]):not([type=image]):not([type=button]):not([type=reset]):not([type=submit]):not([type=hidden])::-moz-placeholder, textarea::-moz-placeholder {
   color: hsl(var(--clr-placeholder));
   opacity: 1;
 }
@@ -2655,7 +2630,8 @@ input[type=radio]:disabled:checked {
 
 input[type=range] {
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%;
   height: 0.3125rem;
   border: 1px solid hsl(var(--clr-gray-light-1));
@@ -2678,7 +2654,8 @@ input[type=range]:focus, input[type=range]:focus:hover {
 
 select {
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: block;
   height: 2.75rem;
   width: 100%;
@@ -2735,7 +2712,6 @@ select:disabled, select[disabled] {
   position: absolute;
   right: 10px;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -2787,7 +2763,6 @@ textarea {
 }
 
 .form-managed-file {
-  -ms-flex-align: center;
   align-items: center;
 }
 .form-managed-file .messages {
@@ -2799,13 +2774,10 @@ textarea {
 
 @media (min-width: 768px) {
   .webform-document-file {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .webform-document-file .description {
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
   }
   .webform-document-file .button {
@@ -2813,14 +2785,11 @@ textarea {
     margin-top: 0;
   }
   .file-upload-wrapper {
-    -ms-flex-positive: 1;
     flex-grow: 1;
     width: auto;
   }
   .form-managed-file {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .form-managed-file .messages {
@@ -3409,9 +3378,7 @@ caption {
     width: 7.5rem;
   }
   .table-responsive.has-scroll.js-table--th-row thead tr {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .table-responsive.has-scroll.js-table--th-row thead tr:last-child {
@@ -3429,7 +3396,6 @@ caption {
     border-bottom: 1px solid white;
   }
   .table-responsive.has-scroll.js-table--th-row tbody {
-    display: -ms-flexbox;
     display: flex;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x: auto;
@@ -3437,9 +3403,7 @@ caption {
     width: calc(100vw - 120px - 40px);
   }
   .table-responsive.has-scroll.js-table--th-row tbody tr {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .table-responsive.has-scroll.js-table--th-row tbody th,

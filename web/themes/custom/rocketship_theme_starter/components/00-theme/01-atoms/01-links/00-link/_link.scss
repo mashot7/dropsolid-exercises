@@ -111,3 +111,7 @@ a:not([href]):not([tabindex]):focus {
 [onclick^="window.open"] {
   cursor: pointer;
 }
+
+.block-block_content .field--name-field-link a {
+  color: #0a7bc1;
+}
