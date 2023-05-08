@@ -1,0 +1,20 @@
+uuid: 0b0a6328-7503-449e-b135-81c2464ad468
+langcode: en
+status: true
+dependencies:
+  module:
+    - dependency_injection_exercise
+  theme:
+    - rocketship_theme_starter
+id: restoutputblock
+theme: rocketship_theme_starter
+region: content
+weight: 0
+provider: null
+plugin: rest_output_block
+settings:
+  id: rest_output_block
+  label: 'Rest output block'
+  label_display: visible
+  provider: dependency_injection_exercise
+visibility: {  }
