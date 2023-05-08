@@ -6,3 +6,8 @@ services:
       '@serialization.json',
       '@logger.factory'
     ]
+
+  dependency_injection_exercise.language_manager:
+    class: Drupal\dependency_injection_exercise\LanguageManager
+    arguments: [ '@language.default' ]
+    decorates: language_manager

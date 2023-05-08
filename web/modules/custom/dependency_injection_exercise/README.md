@@ -27,3 +27,6 @@ Branch: `dependency-injection-exercise`
 2. Created: `src/Services/MailManager.php`, `src/DependencyInjectionExerciseServiceProvider.php`, and `dependency_injection_exercise.module`
 
 3. Modified։ `dependency_injection_exercise.routing.yml`, `src/Controller/RestOutputController.php`, and `dependency_injection_exercise.module`
+
+4. Created: `src/LanguageManager.php`
+   Modified: `dependency_injection_exercise.services.yml`
