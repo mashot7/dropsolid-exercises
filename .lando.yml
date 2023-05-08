@@ -1,0 +1,13 @@
+name: dropsolid
+recipe: drupal9
+config:
+  webroot: web
+
+services:
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+proxy:
+  phpmyadmin:
+    - "phpmyadmin.dropsolid.lndo.site"

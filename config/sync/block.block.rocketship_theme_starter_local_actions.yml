@@ -1,0 +1,20 @@
+uuid: 1a233a06-0bf8-42bf-bd8e-9ffa0d0c7377
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rocketship_theme_starter
+_core:
+  default_config_hash: jTVNNRuHw-HorRwLO2XWMdzWlkOxx1YVaBqXIL2MMFg
+id: rocketship_theme_starter_local_actions
+theme: rocketship_theme_starter
+region: tabs
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

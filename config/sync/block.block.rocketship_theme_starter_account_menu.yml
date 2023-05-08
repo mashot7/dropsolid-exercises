@@ -1,0 +1,27 @@
+uuid: d0e468ab-a03b-4e34-9bc3-7018d55eb90b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - rocketship_theme_starter
+_core:
+  default_config_hash: 1z8Y96VfARJ7lL8eJXDkXv5nfqwAhzjyPULrsz-m7fQ
+id: rocketship_theme_starter_account_menu
+theme: rocketship_theme_starter
+region: nav_secondary
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

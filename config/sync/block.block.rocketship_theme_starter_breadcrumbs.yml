@@ -1,0 +1,22 @@
+uuid: 10c8e76e-d561-4271-8618-07908526124c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rocketship_theme_starter
+_core:
+  default_config_hash: di9H3w-J2Eu0jGxj2wofNYtFiQABS6LC5md9beWLmuM
+id: rocketship_theme_starter_breadcrumbs
+theme: rocketship_theme_starter
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

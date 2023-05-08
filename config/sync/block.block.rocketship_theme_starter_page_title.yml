@@ -1,0 +1,20 @@
+uuid: 989626bd-a66f-4be8-a535-08a1064708c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rocketship_theme_starter
+_core:
+  default_config_hash: 8E3XgLMgVIDwn7rj5Ghm1NbuFGSe1ixsLEgdWy2YEuc
+id: rocketship_theme_starter_page_title
+theme: rocketship_theme_starter
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

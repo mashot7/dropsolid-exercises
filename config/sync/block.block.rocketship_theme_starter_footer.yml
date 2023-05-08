@@ -1,0 +1,27 @@
+uuid: 4b1d3811-9872-475e-8ea5-90d3056ce6fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - rocketship_theme_starter
+_core:
+  default_config_hash: i9kfUUMKE5IOk9NOlZwjXMJ-GQ3_aK8aTfqDbCx4ZbE
+id: rocketship_theme_starter_footer
+theme: rocketship_theme_starter
+region: doormat
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
