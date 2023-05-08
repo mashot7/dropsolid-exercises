@@ -38,6 +38,7 @@ libraries:
   - rocketship_theme_starter/component_menu
   - rocketship_theme_starter/component_search
   - rocketship_theme_starter/component_images
+  - rocketship_theme_starter/helpers
 
 libraries-override:
   core/modernizr: rocketship_theme_starter/modernizr-custom # override from core because we want to be able to update

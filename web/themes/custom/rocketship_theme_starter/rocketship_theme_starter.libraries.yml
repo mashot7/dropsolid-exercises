@@ -182,3 +182,27 @@ rocketship_content_blocks:
 #     - core/jquery
 #     - core/drupal
 #     - core/jquery.once
+
+helpers:
+  js:
+    js/helpers.js: { external: false, minified: false }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+block_info:
+  js:
+    js/block-info.js: { external: false, minified: false }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+block_info_link:
+  js:
+    js/block-info-link.js: { external: false, minified: false }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

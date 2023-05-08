@@ -641,6 +641,12 @@ function rocketship_theme_starter_preprocess_field(&$variables) {
       }
     }
   }
+
+  if ($variables['element']['#entity_type'] == 'block_content'
+    && $variables['element']['#bundle'] == 'info'
+    && $variables['element']['#field_name'] == 'field_link') {
+    $variables['#attached']['library'][] = 'rocketship_theme_starter/block_info_link';
+  }
 }
 
 /**
