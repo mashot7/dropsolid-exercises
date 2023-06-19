@@ -1,5 +1,5 @@
 # Drupal Frontend Exercises Solutions
-# Note: More details can be founded in [dependency_injection_exercise](https://github.com/mashot7/drupal-front-and-back-exercises/tree/main/web/modules/custom/dependency_injection_exercise) custom module and [rocketship_theme_starter](https://github.com/mashot7/drupal-front-and-back-exercises/tree/main/web/themes/custom/rocketship_theme_starter) custom theme README files.
+### Note: More details can be founded in [dependency_injection_exercise](https://github.com/mashot7/drupal-front-and-back-exercises/tree/main/web/modules/custom/dependency_injection_exercise) custom module and [rocketship_theme_starter](https://github.com/mashot7/drupal-front-and-back-exercises/tree/main/web/themes/custom/rocketship_theme_starter) custom theme README files.
 
 Every exercise solution is committed separately. E.g. exercise 1: "DFE: Exercise 1" and etc.
 
